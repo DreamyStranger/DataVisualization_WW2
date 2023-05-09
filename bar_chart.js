@@ -98,15 +98,14 @@ function AddBackButton(svg) {
 function AddBars(svg, newData, x, y, color) {
     // Create a stack generator for the data
     const stack = d3.stack()
-        .keys(["Civilian_Casualties", "Military_Casualties"])
-        .order(d3.stackOrderDescending);
+        .keys(["Military_Casualties", "Civilian_Casualties"])
     const stackedData = stack(newData);
 
     // Add a group for each event
     const groups = svg.selectAll("g")
         .data(stackedData)
         .enter().append("g")
-        .attr("fill", (d, i) => i === 0 ? d3.rgb(color).brighter(1) : color);
+        .attr("fill", (d, i) => i === 1 ? d3.rgb(color).brighter(1) : color);
 
     // Add a rectangle for each value in the stack
     const bars = groups.selectAll("rect")
@@ -242,7 +241,7 @@ function handleTouchEvents(bars, tooltip, TOUCH_THRESHOLD, data, innerHeight) {
                 tooltip.select("#civilian_casualties").text(`Civilian casualties: ${d.data.Civilian_Casualties.toLocaleString()}`);
                 tooltip.select("#military_casualties").text("");
             }
-            else {
+            else if (stackIndex == 0) {
                 tooltip.select("#military_casualties").text(`Military casualties: ${d.data.Military_Casualties.toLocaleString()}`);
                 tooltip.select("#civilian_casualties").text("");
             }
