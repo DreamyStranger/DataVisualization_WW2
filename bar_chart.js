@@ -154,7 +154,6 @@ function FadeInText(selector, text, onEnd = null) {
     });
 }
 
-
 function FadeOutText(selector, onEnd = null) {
     const textDuration = 35; // duration for each letter's transition
     let textSelection = d3.select(selector);
@@ -302,4 +301,3 @@ function handleTouchEvents(bars, tooltip, TOUCH_THRESHOLD, data, innerHeight) {
             }
         });
 }
-
