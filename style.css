@@ -1,0 +1,115 @@
+/* General body styling */
+body {
+    margin: 0;
+    background-image: url('war.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    filter: brightness(100%);
+}
+
+/* White rectangle styling */
+#white-rectangle {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), inset 8px 0 8px -5px rgba(0, 0, 0, 0.5), inset -8px 0 8px -5px rgba(0, 0, 0, 0.5);
+    width: calc(8.5 * 96px);
+    /* 1 inch = 96 CSS pixels */
+    height: calc(11 * 96px);
+    max-width: calc(90vw);
+    max-height: calc(90vh);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+}
+
+/* Center Image styling */
+#center-graph {
+    background-color: white;
+    padding: 10px;
+    width: 80%;
+    height: 80%;
+}
+
+/* Title styling */
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 5%;
+}
+
+h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1%;
+}
+
+/* Authors and date styling */
+.authors {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 2%;
+}
+
+.date {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 0;
+}
+
+.tooltip {
+    position: absolute;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    left: 9999px;
+    padding: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12px;
+    z-index: 999;
+}
+
+
+
+/* Add media queries for different screen sizes */
+@media (max-width: 1200px) {
+    #white-rectangle {
+        width: calc(7.5 * 96px);
+        height: calc(10 * 96px);
+    }
+}
+
+@media (max-width: 992px) {
+    #white-rectangle {
+        width: calc(6.5 * 96px);
+        height: calc(9 * 96px);
+    }
+}
+
+@media (max-width: 768px) {
+    #white-rectangle {
+        width: calc(5.5 * 96px);
+        height: calc(8 * 96px);
+    }
+}
+
+@media (max-width: 576px) {
+    #white-rectangle {
+        width: calc(4.5 * 96px);
+        height: calc(7 * 96px);
+    }
+}

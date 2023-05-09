@@ -1,0 +1,56 @@
+[
+    {
+        "Country": "Soviet Union",
+        "Military_Casualties": 8800000,
+        "Civilian_Casualties": 15200000,
+        "Total_Casualties": 24000000
+    },
+    {
+        "Country": "Germany",
+        "Military_Casualties": 5533000,
+        "Civilian_Casualties": 1840000,
+        "Total_Casualties": 7373000
+    },
+    {
+        "Country": "China",
+        "Military_Casualties": 3000000,
+        "Civilian_Casualties": 17000000,
+        "Total_Casualties": 20000000
+    },
+    {
+        "Country": "Japan",
+        "Military_Casualties": 2830000,
+        "Civilian_Casualties": 672000,
+        "Total_Casualties": 3502000
+    },
+    {
+        "Country": "United States",
+        "Military_Casualties": 416800,
+        "Civilian_Casualties": 0,
+        "Total_Casualties": 416800
+    },
+    {
+        "Country": "United Kingdom",
+        "Military_Casualties": 383800,
+        "Civilian_Casualties": 67100,
+        "Total_Casualties": 450900
+    },
+    {
+        "Country": "Italy",
+        "Military_Casualties": 301400,
+        "Civilian_Casualties": 153200,
+        "Total_Casualties": 454600
+    },
+    {
+        "Country": "France",
+        "Military_Casualties": 217600,
+        "Civilian_Casualties": 350000,
+        "Total_Casualties": 567600
+    },
+    {
+        "Country": "Poland",
+        "Military_Casualties": 240000,
+        "Civilian_Casualties": 5620000,
+        "Total_Casualties": 5860000
+    }
+]
