@@ -1,8 +1,10 @@
+import { createBarChart } from './bar_chart.js';
+
 /**
  * Creates a pie chart using D3.js and adds tooltips and click effects to each slice.
  * @param {Array} data - An array of objects representing the data to be visualized. Each object should contain a "Country" property and a "Total_Casualties" property.
  */
-function createPieChart(data) {
+export function createPieChart(data) {
     // Set up dimensions and radius for the chart
     const width = document.getElementById('center-graph').clientWidth;
     const height = document.getElementById('center-graph').clientHeight;
@@ -12,6 +14,9 @@ function createPieChart(data) {
     const color = d3.scaleOrdinal()
         .domain(data.map(d => d.Total_Casualties))
         .range(d3.schemeCategory10);
+
+    //Array of used colors
+    const sliceColors = data.map(d => color(d.Total_Casualties));
 
     // Set up the pie layout and arc generator for the chart
     const pie = d3.pie()
@@ -48,6 +53,10 @@ function createPieChart(data) {
 
     tooltip.append("div")
         .attr("id", "total-casualties");
+
+    //Update Text
+    d3.select("h1").text("WW2 Casualties");
+    d3.select("h2").text("Can you guess a country by the color?");
 
     // Add mouseover and click event listener to each pie slice
     g.append("path")
@@ -107,29 +116,7 @@ function createPieChart(data) {
                 .duration(200)
                 .attr("d", arc);
         })
-    /*.on("click", function (event, d) {
-        // Toggle selection on click
-        const selected = d3.select(this).classed("selected");
-        d3.selectAll(".arc path").classed("selected", false);
-        d3.select(this).classed("selected", !selected);
-
-        // Highlight selected pie slice with golden color
-        d3.selectAll(".arc path.selected")
-            .style("stroke", "goldenrod")
-            .style("stroke-width", "4px")
-            .style("filter", "brightness(150%)");
-
-        // Remove highlight and volume effect from non-selected pie slices
-        d3.selectAll(".arc path:not(.selected)")
-            .style("stroke", "none")
-            .style("filter", "brightness(100%)")
-            .transition()
-            .duration(200)
-            .attr("d", arc);
-    });*/
+        .on("click", function (event, d) {
+            createBarChart(d.data.Country, data, sliceColors[d.index]);
+        });
 }
-
-//Parse the data and create a chart
-d3.json("main_pie.json").then(data => {
-    createPieChart(data);
-});
