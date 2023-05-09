@@ -2,7 +2,12 @@ import { createBarChart } from './bar_chart.js';
 
 export function createPieChart(data) {
 
+    //useful constants
     let touched = 0;
+    const TOUCH_THRESHOLD = 300; // milliseconds
+    let touchStartTime = 0;
+    let touchEndTime = 0;
+
 
     const width = document.getElementById('center-graph').clientWidth;
     const height = document.getElementById('center-graph').clientHeight;
@@ -56,9 +61,10 @@ export function createPieChart(data) {
         .attr("d", arc)
         .style("fill", d => color(d.data.Total_Casualties))
         .on("mouseenter touchstart", function (event, d) {
+            touchStartTime = new Date().getTime();
             tooltip.select("#country").text(d.data.Country);
             tooltip.select("#total-casualties").text(`Total casualties: ${d.data.Total_Casualties.toLocaleString()}`);
-            tooltip.select("#hint").text(`Want to see more? Double click!`);
+            tooltip.select("#hint").text(`Want to see more? Press HARD!`);
             tooltip.style("left", (event.pageX + 10) + "px")
                 .style("top", (event.pageY - 28) + "px");
 
@@ -88,11 +94,11 @@ export function createPieChart(data) {
             touched = 0;
         })
         .on("click touchend", function (event, d) {
-            event.stopPropagation(); // Prevent triggering other touchend listeners
-            touched += 1;
-            if (touched == 2) {
-                touched = 0;
-                createBarChart(d.data.Country, data, sliceColors[d.index]);
+            touchEndTime = new Date().getTime();
+            let touchDuration = touchEndTime - touchStartTime;
+            if (touchDuration > TOUCH_THRESHOLD) {
+                event.stopPropagation(); // Prevent triggering other touchend listeners
+                    createBarChart(d.data.Country, data, sliceColors[d.index]);
             }
         });
 
