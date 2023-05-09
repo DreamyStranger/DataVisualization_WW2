@@ -63,8 +63,8 @@ function Clear() {
 function SetDimensions() {
     let containerWidth = document.getElementById('center-graph').clientWidth - 20; // Subtract padding
     let containerHeight = document.getElementById('center-graph').clientHeight - 20; // Subtract padding
-    let width = 0.8 * containerWidth;
-    let height = 0.8 * containerHeight;
+    let width = 0.6 * containerWidth;
+    let height = 0.6 * containerHeight;
     let innerWidth = width;
     let innerHeight = height;
     return { containerWidth, containerHeight, width, height, innerWidth, innerHeight };
