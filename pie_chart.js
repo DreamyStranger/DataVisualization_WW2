@@ -1,7 +1,8 @@
 import { createBarChart } from './bar_chart.js';
 
 export function createPieChart(data) {
-    const TOUCH_THRESHOLD = Initialize();
+
+    Clear();
 
     const { width, height, radius } = createPieChartDimensions();
 
@@ -18,19 +19,16 @@ export function createPieChart(data) {
     FadeInText("h1", "WW2 Casualties", () => FadeInText("h2", "Can you guess a country by the color?"));
     FadeIn(pieSlices);
 
-    handleTouchEvents(pieSlices, arc, tooltip, TOUCH_THRESHOLD, createBarChart, data, color, radius, pieSlices);
+    handleTouchEvents(pieSlices, arc, tooltip, 500, createBarChart, data, color, radius, pieSlices);
 }
-
 
 //Helper Functions
 
-function Initialize() {
-
+function Clear() {
     d3.select("#center-graph svg").remove();
     d3.select("#tooltip").remove();
-
-    let TOUCH_THRESHOLD = 500; // milliseconds
-    return TOUCH_THRESHOLD;
+    d3.select("h1").selectAll("tspan").remove();
+    d3.select("h2").selectAll("tspan").remove();
 }
 
 function createPieChartDimensions() {
@@ -124,7 +122,6 @@ function FadeInText(selector, text, onEnd = null) {
     });
 }
 
-
 function FadeOutText(selector, onEnd = null) {
     const textDuration = 35; // duration for each letter's transition
     let textSelection = d3.select(selector);
@@ -137,14 +134,14 @@ function FadeOutText(selector, onEnd = null) {
         .duration(textDuration)
         .style("opacity", 0)
         .on("end", function () {
-          if (index === tspans.length - 1) {
+          if (index === tspans.length - 1 && onEnd) {
             onEnd();
           }
         });
     });
   }
 
-function FadeIn(pieSlices, onEnd = null) {
+  function FadeIn(pieSlices, onEnd = null) {
     let sliceDuration = 200; // duration for each slice's transition
 
     pieSlices.each(function (d, index) {
@@ -154,12 +151,13 @@ function FadeIn(pieSlices, onEnd = null) {
             .duration(sliceDuration)
             .style("opacity", 1)
             .on("end", function () {
-                if (index === pieSlices.size() - 1) {
+                if (index === pieSlices.size() - 1 && onEnd) {
                     onEnd();
                 }
             });
     });
 }
+
 
 function FadeOut(pieSlices, onEnd = null) {
     const sliceDuration = 200; // duration for each slice's transition
@@ -171,14 +169,12 @@ function FadeOut(pieSlices, onEnd = null) {
             .duration(sliceDuration)
             .style("opacity", 0)
             .on("end", function () {
-                if (index === pieSlices.size() - 1) {
+                if (index === pieSlices.size() - 1 && onEnd) {
                     onEnd();
                 }
             });
     });
 }
-
-
 
 function handleTouchEvents(g, arc, tooltip, TOUCH_THRESHOLD, createBarChart, data, color, radius, pieSlices) {
 
@@ -254,4 +250,3 @@ function handleTouchEvents(g, arc, tooltip, TOUCH_THRESHOLD, createBarChart, dat
             }
         });
 }
-

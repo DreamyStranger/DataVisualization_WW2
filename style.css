@@ -16,7 +16,7 @@ body {
 
 /* White rectangle styling */
 #white-rectangle {
-    background-color: white;
+    background-color: gray;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), inset 8px 0 8px -5px rgba(0, 0, 0, 0.5), inset -8px 0 8px -5px rgba(0, 0, 0, 0.5);
     width: calc(8.5 * 96px);
@@ -34,6 +34,7 @@ body {
 /* Center Image styling */
 #center-graph {
     background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), inset 8px 0 8px -5px rgba(0, 0, 0, 0.5), inset -8px 0 8px -5px rgba(0, 0, 0, 0.5);
     padding: 10px;
     width: 80%;
     height: 80%;
