@@ -68,8 +68,6 @@ export function createPieChart(data) {
                     .innerRadius(0)
                     .outerRadius(radius * 1.1)
                 );
-
-            touched += 1;
         })
         .on("mousemove touchmove", function (event) {
             tooltip.style("left", (event.pageX + 10) + "px")
@@ -83,10 +81,12 @@ export function createPieChart(data) {
                 .transition()
                 .duration(200)
                 .attr("d", arc);
+            touched = 0;
         })
         .on("click touchend", function (event, d) {
             event.stopPropagation(); // Prevent triggering other touchend listeners
-            if (touched >= 2) {
+            touched += 1;
+            if (touched == 2) {
                 touched = 0;
                 createBarChart(d.data.Country, data, sliceColors[d.index]);
             }
