@@ -5,7 +5,7 @@ export function createBarChart(country, data, color) {
     //remove old graph and tooltip
     d3.select("#center-graph svg").remove();
     d3.select("#tooltip").remove();
-    
+
     // Update the title and subtitle
     d3.select("h1").text(`WW2 Casualties - ${country}`);
     d3.select("h2").text("Military vs Civilian Casualties");
@@ -18,14 +18,12 @@ export function createBarChart(country, data, color) {
     ];
 
     // Define dimensions for the chart
-    // Define dimensions for the chart
     const containerWidth = document.getElementById('center-graph').clientWidth - 20; // Subtract padding
     const containerHeight = document.getElementById('center-graph').clientHeight - 20; // Subtract padding
     const width = 0.8 * containerWidth;
     const height = 0.8 * containerHeight;
-    const margin = { top: 20, right: 20, bottom: 30, left: 40 };
-    const innerWidth = width - margin.left - margin.right;
-    const innerHeight = height - margin.top - margin.bottom;
+    const innerWidth = width;
+    const innerHeight = height;
 
 
     // Set up scales for the chart
@@ -37,13 +35,13 @@ export function createBarChart(country, data, color) {
         .range([innerHeight, 0])
         .domain([0, d3.max(dataForCountry, d => d.value)]);
 
-        const svg = d3.select("#center-graph")
+    const svg = d3.select("#center-graph")
         .append("svg")
         .attr("width", containerWidth)
         .attr("height", containerHeight)
         .attr("viewBox", `0 0 ${containerWidth} ${containerHeight}`) // Add viewBox attribute
         .append("g")
-        .attr("transform", `translate(${(containerWidth - width) / 2 + margin.left}, ${(containerHeight - height) / 2 + margin.top})`);
+        .attr("transform", `translate(${(containerWidth - width) / 2}, ${(containerHeight - height) / 2})`);
 
     // Add rectangle elements for each data point
     svg.selectAll("rect")

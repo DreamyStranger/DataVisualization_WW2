@@ -1,24 +1,16 @@
 import { createBarChart } from './bar_chart.js';
 
-/**
- * Creates a pie chart using D3.js and adds tooltips and click effects to each slice.
- * @param {Array} data - An array of objects representing the data to be visualized. Each object should contain a "Country" property and a "Total_Casualties" property.
- */
 export function createPieChart(data) {
-    // Set up dimensions and radius for the chart
     const width = document.getElementById('center-graph').clientWidth;
     const height = document.getElementById('center-graph').clientHeight;
     const radius = 0.8 * Math.min(width, height) / 2;
 
-    // Set up color scale for the chart
     const color = d3.scaleOrdinal()
         .domain(data.map(d => d.Total_Casualties))
         .range(d3.schemeCategory10);
 
-    //Array of used colors
     const sliceColors = data.map(d => color(d.Total_Casualties));
 
-    // Set up the pie layout and arc generator for the chart
     const pie = d3.pie()
         .value(d => d.Total_Casualties)
         .sort(null);
@@ -27,7 +19,6 @@ export function createPieChart(data) {
         .innerRadius(0)
         .outerRadius(radius);
 
-    // Create SVG element and group for the chart
     const svg = d3.select("#center-graph")
         .append("svg")
         .attr("width", width)
@@ -35,13 +26,11 @@ export function createPieChart(data) {
         .append("g")
         .attr("transform", `translate(${width / 2}, ${height / 2})`);
 
-    // Create group elements for each pie slice and bind data to them
     const g = svg.selectAll(".arc")
         .data(pie(data))
         .enter().append("g")
         .attr("class", "arc");
 
-    // Add tooltip element to the page
     const tooltip = d3.select("body")
         .append("div")
         .attr("id", "tooltip")
@@ -54,33 +43,18 @@ export function createPieChart(data) {
     tooltip.append("div")
         .attr("id", "total-casualties");
 
-    //Update Text
     d3.select("h1").text("WW2 Casualties");
     d3.select("h2").text("Can you guess a country by the color?");
 
-    // Add mouseover and click event listener to each pie slice
     g.append("path")
         .attr("d", arc)
         .style("fill", d => color(d.data.Total_Casualties))
-        .on("mouseover", function (event, d) {
-            // Calculate tooltip position relative to mouse cursor
-            const tooltipWidth = parseFloat(tooltip.style("width"));
-            const tooltipHeight = parseFloat(tooltip.style("height"));
-            const mouseX = event.pageX;
-            const mouseY = event.pageY;
-            const tooltipX = Math.min(mouseX + 10, window.innerWidth - tooltipWidth - 10);
-            const tooltipY = Math.min(mouseY + 10, window.innerHeight - tooltipHeight - 10);
-
-            // Update tooltip content with country and casualty information
+        .on("mouseenter touchstart", function (event, d) {
             tooltip.select("#country").text(d.data.Country);
             tooltip.select("#total-casualties").text(`Total casualties: ${d.data.Total_Casualties.toLocaleString()}`);
+            tooltip.style("left", (event.pageX + 10) + "px")
+                .style("top", (event.pageY - 28) + "px");
 
-            // Position and display tooltip
-            tooltip.style("left", `${tooltipX}px`)
-                .style("top", `${tooltipY}px`)
-                .style("display", "block");
-
-            // Highlight pie slice and add volume effect
             d3.select(this)
                 .style("stroke", "goldenrod")
                 .style("stroke-width", "4px")
@@ -92,23 +66,12 @@ export function createPieChart(data) {
                     .outerRadius(radius * 1.1)
                 );
         })
-        .on("mousemove", function (event) {
-            // Update tooltip position with mouse cursor
-            const tooltipWidth = parseFloat(tooltip.style("width"));
-            const tooltipHeight = parseFloat(tooltip.style("height"));
-            const mouseX = event.pageX;
-            const mouseY = event.pageY;
-            const tooltipX = Math.min(mouseX + 10, window.innerWidth - tooltipWidth - 10);
-            const tooltipY = Math.min(mouseY + 10, window.innerHeight - tooltipHeight - 10);
-
-            tooltip.style("left", `${tooltipX}px`)
-                .style("top", `${tooltipY}px`);
+        .on("mousemove touchmove", function (event) {
+            tooltip.style("left", (event.pageX + 10) + "px")
+                .style("top", (event.pageY - 28) + "px");
         })
-        .on("mouseout", function () {
-            // Hide tooltip on mouseout
-            tooltip.style("display", "none");
-
-            // Remove highlight and volume effect from pie slice
+        .on("mouseleave touchend", function () {
+            tooltip.style("left", "9999px");
             d3.select(this)
                 .style("stroke", "none")
                 .style("filter", "brightness(100%)")
@@ -116,7 +79,25 @@ export function createPieChart(data) {
                 .duration(200)
                 .attr("d", arc);
         })
-        .on("click", function (event, d) {
+        .on("click touchend", function (event, d) {
+            event.stopPropagation(); // Prevent triggering other touchend listeners
             createBarChart(d.data.Country, data, sliceColors[d.index]);
+        });
+
+    // Close tooltip on touchend event outside the pie chart
+    d3.select("body")
+        .on("touchend", function (event) {
+            // Hide tooltip on touchend event outside the pie chart
+            if (!event.target.closest(".arc")) {
+                tooltip.style("left", "9999px");
+
+                // Remove highlight and volume effect from pie slice
+                g.selectAll("path")
+                    .style("stroke", "none")
+                    .style("filter", "brightness(100%)")
+                    .transition()
+                    .duration(200)
+                    .attr("d", arc);
+            }
         });
 }
