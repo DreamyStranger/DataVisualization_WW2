@@ -46,6 +46,9 @@ export function createPieChart(data) {
     tooltip.append("div")
         .attr("id", "total-casualties");
 
+    tooltip.append("div")
+        .attr("id", "hint");
+
     d3.select("h1").text("WW2 Casualties");
     d3.select("h2").text("Can you guess a country by the color?");
 
@@ -55,6 +58,7 @@ export function createPieChart(data) {
         .on("mouseenter touchstart", function (event, d) {
             tooltip.select("#country").text(d.data.Country);
             tooltip.select("#total-casualties").text(`Total casualties: ${d.data.Total_Casualties.toLocaleString()}`);
+            tooltip.select("#hint").text(`Want to see more? Double click!`);
             tooltip.style("left", (event.pageX + 10) + "px")
                 .style("top", (event.pageY - 28) + "px");
 
