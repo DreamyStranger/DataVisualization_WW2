@@ -1,6 +1,9 @@
 import { createBarChart } from './bar_chart.js';
 
 export function createPieChart(data) {
+
+    let touched = 0;
+
     const width = document.getElementById('center-graph').clientWidth;
     const height = document.getElementById('center-graph').clientHeight;
     const radius = 0.8 * Math.min(width, height) / 2;
@@ -65,6 +68,8 @@ export function createPieChart(data) {
                     .innerRadius(0)
                     .outerRadius(radius * 1.1)
                 );
+
+            touched += 1;
         })
         .on("mousemove touchmove", function (event) {
             tooltip.style("left", (event.pageX + 10) + "px")
@@ -81,7 +86,10 @@ export function createPieChart(data) {
         })
         .on("click touchend", function (event, d) {
             event.stopPropagation(); // Prevent triggering other touchend listeners
-            createBarChart(d.data.Country, data, sliceColors[d.index]);
+            if (touched >= 2) {
+                touched = 0;
+                createBarChart(d.data.Country, data, sliceColors[d.index]);
+            }
         });
 
     // Close tooltip on touchend event outside the pie chart
