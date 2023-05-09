@@ -287,7 +287,7 @@ function handleTouchEvents(bars, tooltip, TOUCH_THRESHOLD, data, innerHeight) {
 
             touchStartTime = new Date().getTime();
         });
-
+        
     // Close tooltip on touchend event outside the bars
     d3.select("body")
         .on("touchend", function (event) {
