@@ -1,0 +1,51 @@
+[
+    {
+        "Event": "Marco Polo Bridge Incident (1937)",
+        "Military_Casualties": 10000,
+        "Civilian_Casualties": 50000,
+        "Total_Casualties": 60000,
+        "Description": "A battle between China and Japan that marked the beginning of the Second Sino-Japanese War."
+    },
+    {
+        "Event": "Battle of Shanghai (1937)",
+        "Military_Casualties": 30000,
+        "Civilian_Casualties": 200000,
+        "Total_Casualties": 230000,
+        "Description": "A major battle fought between the Republic of China and the Empire of Japan during the Second Sino-Japanese War."
+    },
+    {
+        "Event": "Battle of Wuhan (1938)",
+        "Military_Casualties": 70000,
+        "Civilian_Casualties": 500000,
+        "Total_Casualties": 570000,
+        "Description": "A battle fought by China and Japan in the vicinity of Wuhan, resulting in one of the largest and deadliest battles of the Second Sino-Japanese War."
+    },
+    {
+        "Event": "Battle of Changsha (1939)",
+        "Military_Casualties": 40000,
+        "Civilian_Casualties": 60000,
+        "Total_Casualties": 100000,
+        "Description": "A major battle fought between the Republic of China's National Revolutionary Army and the Imperial Japanese Army."
+    },
+    {
+        "Event": "Zhejiang-Jiangxi campaign (1942)",
+        "Military_Casualties": 70000,
+        "Civilian_Casualties": 250000,
+        "Total_Casualties": 320000,
+        "Description": "A campaign launched by the Imperial Japanese Army during the Second Sino-Japanese War to take control of the Chinese provinces of Zhejiang and Jiangxi."
+    },
+    {
+        "Event": "Battle of Changde (1943)",
+        "Military_Casualties": 30000,
+        "Civilian_Casualties": 10000,
+        "Total_Casualties": 40000,
+        "Description": "A battle fought between the Chinese National Revolutionary Army and the Japanese forces in Changde, Hunan."
+    },
+    {
+        "Event": "Nanjing Massacre (1937 - 1938)",
+        "Military_Casualties": 50000,
+        "Civilian_Casualties": 200000,
+        "Total_Casualties": 250000,
+        "Description": "A mass murder and mass rape committed by Japanese troops against the residents of Nanjing, China, during the Second Sino-Japanese War."
+    }
+]

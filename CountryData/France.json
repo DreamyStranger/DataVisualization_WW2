@@ -1,0 +1,44 @@
+[
+    {
+        "Event": "Battle of France (1940)",
+        "Description": "A battle fought during World War II that took place from May 10 to June 25, 1940. It was the first major battle of the war and resulted in the German occupation of France.",
+        "Military_Casualties": 92000,
+        "Civilian_Casualties": 35000,
+        "Total_Casualties": 127000
+    },
+    {
+        "Event": "Bombing of Normandy (1944)",
+        "Description": "A military operation carried out by Allied forces during World War II. The aim of the operation was to establish a foothold on the beaches of Normandy in order to begin the liberation of France from German occupation.",
+        "Military_Casualties": 0,
+        "Civilian_Casualties": 2000,
+        "Total_Casualties": 2000
+    },
+    {
+        "Event": "Oradour-sur-Glane massacre (1944)",
+        "Description": "A massacre carried out by the German Waffen-SS in the village of Oradour-sur-Glane, France. The SS killed a total of 642 men, women, and children in the village.",
+        "Military_Casualties": 0,
+        "Civilian_Casualties": 642,
+        "Total_Casualties": 642
+    },
+    {
+        "Event": "Vercors Massacre (1944)",
+        "Description": "A massacre carried out by the German Wehrmacht in the Vercors massif in southeastern France.",
+        "Military_Casualties": 642,
+        "Civilian_Casualties": 200,
+        "Total_Casualties": 842
+    },
+    {
+        "Event": "Battle of Bir Hakeim (1942)",
+        "Description": "A battle fought between the Free French Forces and the German Afrika Korps during World War II. The battle took place in Libya and lasted from May 26 to June 11, 1942.",
+        "Military_Casualties": 1059,
+        "Civilian_Casualties": 0,
+        "Total_Casualties": 1059
+    },
+    {
+        "Event": "Liberation of Paris (1944)",
+        "Description": "A military operation carried out by Allied forces during World War II. The operation aimed to liberate the French capital city of Paris from German occupation.",
+        "Military_Casualties": 1,
+        "Civilian_Casualties": 1300,
+        "Total_Casualties": 1301
+    }
+]

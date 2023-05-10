@@ -6,7 +6,7 @@ export function createBarChart(country, data, color) {
 
     // Replace spaces with underscores and load the appropriate JSON file
     const fileName = country.replace(/ /g, '_') + '.json';
-    d3.json(fileName).then(newData => {
+    d3.json(`CountryData/${fileName}`).then(newData => {
 
         // Define dimensions for the chart
         const { containerWidth, containerHeight, width, height, innerWidth, innerHeight } = SetDimensions();
@@ -81,20 +81,6 @@ function AddYAxis(svg, yAxis) {
         .call(yAxis);
 }
 
-function AddBackButton(svg) {
-    const backButton = svg.append("text")
-        .attr("x", 400)
-        .attr("y", 400)
-        .attr("class", "back-button")
-        .text("Back to Pie Chart")
-        .style("fill", "black")
-        .style("text-anchor", "end")
-        .style("font-size", "14px")
-        .style("cursor", "pointer");
-
-    return backButton;
-}
-
 function AddBars(svg, newData, x, y, color) {
     // Create a stack generator for the data
     const stack = d3.stack()
@@ -114,7 +100,9 @@ function AddBars(svg, newData, x, y, color) {
         .attr("x", (d, i) => x(i))
         .attr("y", d => y(d[1]))
         .attr("height", d => y(d[0]) - y(d[1]))
-        .attr("width", x.bandwidth());
+        .attr("width", x.bandwidth())
+        .attr("stroke", "black")
+        .attr("stroke-width", 1);
 
     return bars;
 }
@@ -214,6 +202,8 @@ function createTooltip(width, height) {
 
     tooltip.append("div")
         .attr("id", "military_casualties");
+    tooltip.append("div")
+        .attr("id", "description");
 
     tooltip.append("div")
         .attr("id", "hint");
@@ -235,6 +225,7 @@ function handleTouchEvents(bars, tooltip, TOUCH_THRESHOLD, data, innerHeight) {
 
             // Update the tooltip with the event name and the respective casualty count
             tooltip.select("#event").text(d.data.Event);
+            tooltip.select("#description").text(d.data.Description);
 
             if (stackIndex === 1) {
                 tooltip.select("#civilian_casualties").text(`Civilian casualties: ${d.data.Civilian_Casualties.toLocaleString()}`);
@@ -264,7 +255,8 @@ function handleTouchEvents(bars, tooltip, TOUCH_THRESHOLD, data, innerHeight) {
             tooltip.style("left", "9999px");
 
             d3.select(this)
-                .style("stroke", "none")
+                .style("stroke", "black")
+                .style("stroke-width", 1)
                 .style("filter", "brightness(100%)");
         })
         .on("click touchend", function (event, d) {
@@ -287,7 +279,7 @@ function handleTouchEvents(bars, tooltip, TOUCH_THRESHOLD, data, innerHeight) {
 
             touchStartTime = new Date().getTime();
         });
-        
+
     // Close tooltip on touchend event outside the bars
     d3.select("body")
         .on("touchend", function (event) {

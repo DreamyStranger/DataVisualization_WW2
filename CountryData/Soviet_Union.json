@@ -1,0 +1,30 @@
+[
+    {
+        "Event": "Battle of Stalingrad (1942-43)",
+        "Military_Casualties": 750000,
+        "Civilian_Casualties": 40000,
+        "Total_Casualties": 790000,
+        "Description": "The Battle of Stalingrad was a major turning point in World War II and is considered one of the bloodiest battles in history. It was fought between Germany and its allies against the Soviet Union, with over 1.8 million total casualties on both sides."
+    },
+    {
+        "Event": "Siege of Leningrad (1941-44)",
+        "Military_Casualties": 400000,
+        "Civilian_Casualties": 800000,
+        "Total_Casualties": 1200000,
+        "Description": "The Siege of Leningrad was a prolonged military blockade by Nazi Germany against the city of Leningrad, now known as Saint Petersburg, in the Soviet Union. It lasted for 872 days and resulted in the deaths of approximately 1 million civilians and soldiers."
+    },
+    {
+        "Event": "Battle of Kursk (1943)",
+        "Military_Casualties": 460000,
+        "Civilian_Casualties": 20000,
+        "Total_Casualties": 480000,
+        "Description": "The Battle of Kursk was a major tank battle fought between Germany and the Soviet Union during World War II. It was one of the largest tank battles in history and resulted in a Soviet victory, with heavy losses on both sides."
+    },
+    {
+        "Event": "Battle of Berlin (1945)",
+        "Military_Casualties": 100000,
+        "Civilian_Casualties": 0,
+        "Total_Casualties": 100000,
+        "Description": "The Battle of Berlin was the final major offensive of the European Theatre of World War II. It was fought between the Soviet Union and Nazi Germany and resulted in the capture of Berlin by Soviet forces, with heavy casualties on both sides."
+    }
+]

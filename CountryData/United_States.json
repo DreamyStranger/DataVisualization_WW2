@@ -1,0 +1,51 @@
+[
+    {
+        "Event": "Attack on Pearl Harbor (1941)",
+        "Military_Casualties": 2403,
+        "Civilian_Casualties": 109,
+        "Total_Casualties": 2512,
+        "Description": "The Attack on Pearl Harbor was a surprise military strike by the Imperial Japanese Navy Air Service against the United States naval base at Pearl Harbor, Hawaii, on December 7, 1941."
+    },
+    {
+        "Event": "Battle of the Philippines (1941-1942)",
+        "Military_Casualties": 2167,
+        "Civilian_Casualties": 7000,
+        "Total_Casualties": 9167,
+        "Description": "The Battle of the Philippines was the invasion of the Philippines by Japan during World War II, which lasted from December 1941 to May 1942."
+    },
+    {
+        "Event": "Battle of Okinawa (1945)",
+        "Military_Casualties": 72449,
+        "Civilian_Casualties": 142000,
+        "Total_Casualties": 214449,
+        "Description": "The Battle of Okinawa was a major battle of the Pacific War fought on the island of Okinawa by United States Marine and Army forces against the Imperial Japanese Army."
+    },
+    {
+        "Event": "D-Day (1944)",
+        "Military_Casualties": 4414,
+        "Civilian_Casualties": 1000,
+        "Total_Casualties": 5414,
+        "Description": "D-Day was the largest amphibious invasion in history and was carried out by Allied forces during World War II on June 6, 1944, in Normandy, France."
+    },
+    {
+        "Event": "Battle of the Bulge (1944-1945)",
+        "Military_Casualties": 19849,
+        "Civilian_Casualties": 3000,
+        "Total_Casualties": 22849,
+        "Description": "The Battle of the Bulge was the last major German offensive campaign on the Western Front during World War II, and is considered one of the greatest battles fought by the United States Army."
+    },
+    {
+        "Event": "Bombing of Tokyo (1945)",
+        "Military_Casualties": 0,
+        "Civilian_Casualties": 100000,
+        "Total_Casualties": 100000,
+        "Description": "The Bombing of Tokyo was a series of firebombing air raids by the United States Army Air Forces during the Pacific campaigns of World War II, which caused significant destruction and loss of life."
+    },
+    {
+        "Event": "Bataan Death March (1942)",
+        "Military_Casualties": 650,
+        "Civilian_Casualties": 0,
+        "Total_Casualties": 650,
+        "Description": "The Bataan Death March was the forcible transfer of approximately 75,000 American and Filipino prisoners of war after the three-month Battle of Bataan in the Philippines during World War II."
+    }
+]

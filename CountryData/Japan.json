@@ -1,0 +1,51 @@
+[
+    {
+        "Event": "Atomic bombings of Hiroshima and Nagasaki (1945)",
+        "Description": "The United States dropped atomic bombs on the Japanese cities of Hiroshima and Nagasaki in August 1945. These bombings were the first and only use of nuclear weapons in warfare and resulted in significant civilian casualties.",
+        "Military_Casualties": 0,
+        "Civilian_Casualties": 200000,
+        "Total_Casualties": 200000
+    },
+    {
+        "Event": "Battle of Okinawa (1945)",
+        "Description": "The Battle of Okinawa was a major battle fought between Japanese and American forces on the island of Okinawa in the Pacific Theater of World War II. The battle lasted from April to June 1945 and resulted in high casualties on both sides, with significant civilian deaths.",
+        "Military_Casualties": 107000,
+        "Civilian_Casualties": 140000,
+        "Total_Casualties": 247000
+    },
+    {
+        "Event": "Bombing of Tokyo (1945)",
+        "Description": "The United States conducted a series of firebombing raids on Tokyo and other Japanese cities in early 1945. The bombing of Tokyo resulted in significant civilian casualties and widespread destruction.",
+        "Military_Casualties": 0,
+        "Civilian_Casualties": 100000,
+        "Total_Casualties": 100000
+    },
+    {
+        "Event": "Battle of Iwo Jima (1945)",
+        "Description": "The Battle of Iwo Jima was a major battle fought between Japanese and American forces on the island of Iwo Jima in the Pacific Theater of World War II. The battle lasted from February to March 1945 and resulted in high casualties on both sides.",
+        "Military_Casualties": 24000,
+        "Civilian_Casualties": 0,
+        "Total_Casualties": 24000
+    },
+    {
+        "Event": "Bombing of Osaka (1945)",
+        "Description": "The United States conducted a series of firebombing raids on Japanese cities in 1945, including the city of Osaka. The bombing resulted in significant civilian casualties and widespread destruction.",
+        "Military_Casualties": 0,
+        "Civilian_Casualties": 10000,
+        "Total_Casualties": 10000
+    },
+    {
+        "Event": "Bombing of Kobe (1945)",
+        "Description": "The United States conducted a series of firebombing raids on Japanese cities in 1945, including the city of Kobe. The bombing resulted in significant civilian casualties and widespread destruction.",
+        "Military_Casualties": 0,
+        "Civilian_Casualties": 8000,
+        "Total_Casualties": 8000
+    },
+    {
+        "Event": "Battle of Leyte Gulf (1944)",
+        "Description": "The Battle of Leyte Gulf was a major naval battle fought between Japanese and American forces in the Pacific Theater of World War II. The battle took place in October 1944 and resulted in high casualties on both sides.",
+        "Military_Casualties": 12800,
+        "Civilian_Casualties": 0,
+        "Total_Casualties": 12800
+    }
+]

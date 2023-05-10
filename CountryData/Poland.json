@@ -1,0 +1,51 @@
+[
+    {
+        "Event": "Invasion of Poland (1939)",
+        "Military_Casualties": 70000,
+        "Civilian_Casualties": 1000000,
+        "Total_Casualties": 1070000,
+        "Description": "Germany invaded Poland on September 1, 1939, marking the beginning of World War II. The invasion was followed by a campaign of terror and violence against the Polish population."
+    },
+    {
+        "Event": "Warsaw Ghetto Uprising (1943)",
+        "Military_Casualties": 10000,
+        "Civilian_Casualties": 50000,
+        "Total_Casualties": 60000,
+        "Description": "The Warsaw Ghetto Uprising was a resistance effort by the Jewish population in the Warsaw Ghetto against Nazi Germany's efforts to transport the remaining ghetto inhabitants to concentration camps."
+    },
+    {
+        "Event": "Warsaw Uprising (1944)",
+        "Military_Casualties": 20000,
+        "Civilian_Casualties": 200000,
+        "Total_Casualties": 220000,
+        "Description": "The Warsaw Uprising was a major military operation by the Polish resistance during World War II. The uprising was intended to liberate Warsaw from Nazi Germany, but it resulted in significant loss of life."
+    },
+    {
+        "Event": "Massacres of Poles in Volhynia and Eastern Galicia (1943-1945)",
+        "Military_Casualties": 0,
+        "Civilian_Casualties": 100000,
+        "Total_Casualties": 100000,
+        "Description": "The Massacres of Poles in Volhynia and Eastern Galicia were a series of ethnic cleansing actions carried out by Ukrainian nationalists against Polish civilians during World War II."
+    },
+    {
+        "Event": "Auschwitz concentration camp (1940-1945)",
+        "Military_Casualties": 0,
+        "Civilian_Casualties": 1100000,
+        "Total_Casualties": 1100000,
+        "Description": "Auschwitz was the largest concentration and extermination camp established by Nazi Germany during World War II"
+    },
+    {
+        "Event": "Massacres of Poles in Bydgoszcz (1939)",
+        "Military_Casualties": 0,
+        "Civilian_Casualties": 5000,
+        "Total_Casualties": 5000,
+        "Description": "The Massacres of Poles in Bydgoszcz were a series of killings carried out by German forces against Polish civilians in the city of Bydgoszcz during the early stages of World War II."
+    },
+    {
+        "Event": "Katyn Massacre (1940)",
+        "Military_Casualties": 22000,
+        "Civilian_Casualties": 0,
+        "Total_Casualties": 22000,
+        "Description": "The Katyn Massacre was a series of mass executions of Polish military officers and intelligentsia carried out by the Soviet Union in 1940. The exact number of victims is uncertain, but it is estimated that around 22,000 people were killed."
+    }
+]

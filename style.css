@@ -88,8 +88,6 @@ h2 {
     z-index: 999;
 }
 
-
-
 /* Add media queries for different screen sizes */
 @media (max-width: 1200px) {
     #white-rectangle {

@@ -1,0 +1,51 @@
+[
+    {
+        "Event": "The Blitz (1940-1941)",
+        "Military_Casualties": 0,
+        "Civilian_Casualties": 50000,
+        "Total_Casualties": 50000,
+        "Description": "The Blitz was a sustained bombing campaign by Nazi Germany against the United Kingdom during World War II, primarily targeting major cities like London, Coventry, and Liverpool."
+    },
+    {
+        "Event": "Dunkirk evacuation (1940)",
+        "Military_Casualties": 3500,
+        "Civilian_Casualties": 0,
+        "Total_Casualties": 3500,
+        "Description": "The Dunkirk evacuation, also known as Operation Dynamo, was the evacuation of Allied soldiers from the beaches and harbor of Dunkirk, France, in May and June 1940, during World War II."
+    },
+    {
+        "Event": "Operation Overlord (D-Day) (1944)",
+        "Military_Casualties": 27083,
+        "Civilian_Casualties": 0,
+        "Total_Casualties": 27083,
+        "Description": "Operation Overlord was the codename for the Battle of Normandy, a massive Allied operation that began with the D-Day landings on June 6, 1944, and led to the liberation of Western Europe from Nazi control."
+    },
+    {
+        "Event": "Battle of the Atlantic (1939-1945)",
+        "Military_Casualties": 70000,
+        "Civilian_Casualties": 0,
+        "Total_Casualties": 70000,
+        "Description": "The Battle of the Atlantic was the longest continuous military campaign in World War II, pitting Allied naval and air forces against German submarines, surface ships, and aircraft in the Atlantic Ocean."
+    },
+    {
+        "Event": "North African Campaign (1940-1943)",
+        "Military_Casualties": 17490,
+        "Civilian_Casualties": 0,
+        "Total_Casualties": 17490,
+        "Description": "The North African Campaign was fought by Allied and Axis forces in North Africa during World War II, with the primary goal of securing control of the region's ports and shipping lanes."
+    },
+    {
+        "Event": "Italian Campaign (1943-1945)",
+        "Military_Casualties": 31244,
+        "Civilian_Casualties": 0,
+        "Total_Casualties": 31244,
+        "Description": "The Italian Campaign was a series of Allied battles fought in Italy from 1943 to 1945, aimed at removing Italy from the Axis powers and establishing a foothold on the European continent."
+    },
+    {
+        "Event": "RAF Bomber Command operations (1939-1945)",
+        "Military_Casualties": 55740,
+        "Civilian_Casualties": 0,
+        "Total_Casualties": 55740,
+        "Description": "RAF Bomber Command was a major British military unit that operated bomber aircraft during World War II, conducting strategic bombing missions against Axis targets in Europe."
+    }
+]

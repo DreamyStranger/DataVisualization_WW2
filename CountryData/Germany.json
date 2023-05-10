@@ -1,0 +1,44 @@
+[
+    {
+        "Event": "Battle of Stalingrad (1942-1943)",
+        "Military_Casualties": 750000,
+        "Civilian_Casualties": 0,
+        "Total_Casualties": 750000,
+        "Description": "A major battle on the Eastern Front during World War II, fought between the German army and the Soviet Union for control of the city of Stalingrad (now known as Volgograd). The battle is considered to be one of the bloodiest in human history, with hundreds of thousands of casualties on both sides."
+    },
+    {
+        "Event": "Bombing of Dresden (1945)",
+        "Military_Casualties": 0,
+        "Civilian_Casualties": 25000,
+        "Total_Casualties": 25000,
+        "Description": "A series of Allied bombing raids that targeted the German city of Dresden during the final months of World War II. The bombing resulted in a significant loss of life and destruction of the city, with estimates of civilian casualties ranging from 22,000 to 25,000 people."
+    },
+    {
+        "Event": "Siege of Leningrad (1941-1944)",
+        "Military_Casualties": 100000,
+        "Civilian_Casualties": 0,
+        "Total_Casualties": 100000,
+        "Description": "A prolonged military blockade of the Soviet city of Leningrad (now known as St. Petersburg) by German and Finnish forces during World War II. The siege lasted for over two years and resulted in the deaths of hundreds of thousands of civilians due to starvation, disease, and bombardment."
+    },
+    {
+        "Event": "Operation Barbarossa (1941-1945)",
+        "Military_Casualties": 4300000,
+        "Civilian_Casualties": 0,
+        "Total_Casualties": 4300000,
+        "Description": "The code name for Nazi Germany's invasion of the Soviet Union during World War II. It was the largest and deadliest military campaign in history, resulting in the deaths of millions of soldiers and civilians on both sides."
+    },
+    {
+        "Event": "Battle of Kursk (1943)",
+        "Military_Casualties": 200000,
+        "Civilian_Casualties": 0,
+        "Total_Casualties": 200000,
+        "Description": "A major battle on the Eastern Front during World War II, fought between the German army and the Soviet Union near the city of Kursk. The battle is considered to be one of the largest tank battles in history, and resulted in a decisive Soviet victory that marked the turning point of the war on the Eastern Front."
+    },
+    {
+        "Event": "Battle of Berlin (1945)",
+        "Military_Casualties": 50000,
+        "Civilian_Casualties": 250000,
+        "Total_Casualties": 300000,
+        "Description": "A major battle fought between the Soviet Union and Nazi Germany for control of the German capital city of Berlin during the final weeks of World War II in Europe. The battle resulted in a Soviet victory, with heavy casualties on both sides."
+    }
+]

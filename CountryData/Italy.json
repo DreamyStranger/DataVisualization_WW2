@@ -1,0 +1,51 @@
+[
+    {
+        "Event": "Battle of Monte Cassino (1944)",
+        "Military_Casualties": 27000,
+        "Civilian_Casualties": 2000,
+        "Total_Casualties": 29000,
+        "Description": "A series of four battles fought by the Allies against German and Italian forces in the mountains of central Italy. The battles resulted in Allied victory, but at a high cost in lives and resources."
+    },
+    {
+        "Event": "Allied invasion of Sicily (1943)",
+        "Military_Casualties": 29210,
+        "Civilian_Casualties": 6000,
+        "Total_Casualties": 35210,
+        "Description": "An amphibious and airborne invasion of Sicily by the Allies, part of the larger Italian Campaign. The invasion led to the downfall of Italian dictator Benito Mussolini."
+    },
+    {
+        "Event": "Bombing of Rome (1943)",
+        "Military_Casualties": 0,
+        "Civilian_Casualties": 3500,
+        "Total_Casualties": 3500,
+        "Description": "A bombing campaign by Allied forces against the city of Rome, Italy. The bombing resulted in significant damage to the city and the loss of civilian life."
+    },
+    {
+        "Event": "Battle of Anzio (1944)",
+        "Military_Casualties": 7600,
+        "Civilian_Casualties": 1500,
+        "Total_Casualties": 9100,
+        "Description": "A battle between Allied and German forces in and around the town of Anzio, Italy. The battle was part of the larger Italian Campaign and resulted in Allied victory."
+    },
+    {
+        "Event": "Italian Campaign (1943-1945)",
+        "Military_Casualties": 33000,
+        "Civilian_Casualties": 140000,
+        "Total_Casualties": 173000,
+        "Description": "A series of Allied battles fought in Italy against German and Italian forces. The campaign resulted in the eventual defeat of the Axis powers in Italy."
+    },
+    {
+        "Event": "Bombing of Milan (1943)",
+        "Military_Casualties": 0,
+        "Civilian_Casualties": 2000,
+        "Total_Casualties": 2000,
+        "Description": "A bombing campaign by Allied forces against the city of Milan, Italy. The bombing resulted in significant damage to the city and the loss of civilian life."
+    },
+    {
+        "Event": "Battle of Gazala (1942)",
+        "Military_Casualties": 5000,
+        "Civilian_Casualties": 0,
+        "Total_Casualties": 5000,
+        "Description": "A major battle fought in the deserts of western Egypt and eastern Libya during the Western Desert Campaign of World War II. The battle was a decisive victory for German and Italian forces."
+    }
+]
